@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
 
 app.get('/tecnology', function (req, res) {
     res.render("section/tecnology");
-});
+}); 
 
 app.get('/games', function (req, res) {
     res.send("<html><body>Portal de games</body></html>");
