@@ -3,21 +3,17 @@ var app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
-    res.send("<html><body>Portal</body></html>");
+    res.render("home/index");
 });
 
-app.get('/tecnology', function (req, res) {
-    res.render("section/tecnology");
-}); 
-
-app.get('/games', function (req, res) {
-    res.send("<html><body>Portal de games</body></html>");
+app.get('/formulario_inclusao_noticia', function (req, res) {
+    res.render("admin/form_add_noticia");
 });
 
-app.get('/news', function (req, res) {
-    res.send("<html><body>Portal de noticias</body></html>");
+app.get('/noticias', function (req, res) {
+    res.render("noticias/noticias");
 });
 
 app.listen(3000, function () {
-    console.log("express ok");
+    console.log("express oks");
 });
