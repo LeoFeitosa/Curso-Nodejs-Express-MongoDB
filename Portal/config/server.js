@@ -13,6 +13,7 @@ consign()
     .include('app/routes') //include routes automatic
     .then('config/dbConnection.js')
     .then('app/models')//include all models
+    .then('app/controllers')//include all controllers
     .into(app);
 
 module.exports = app;
