@@ -12,7 +12,7 @@ app.set('views', './app/views');
 app.use(express.static('./app/public'));
 app.use(express.urlencoded({ extended: true })); //get data to forms
 
-/* middleware express validator*/
+/*middleware express validator*/
 app.use(expressValidator());
 
 /*autoloads*/
