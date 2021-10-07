@@ -9,6 +9,11 @@ module.exports.runChat = function (application, req, res) {
         return;
     }
 
+    application.get('io').emit(
+        'msgForClient',
+        { apelido: dataForm.apelido, msg: 'Acabou de entrar no chat!' }
+    );
+
     console.log(dataForm);
-    res.render('chat');
+    res.render('chat', { dataForm: dataForm });
 }
