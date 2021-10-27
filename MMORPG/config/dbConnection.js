@@ -1,7 +1,8 @@
 var mongo = require('mongodb');
 
 var connMongoDB = function () {
-    var db = new mongoDb(
+    
+    var db = new mongo.Db(
         'got',
         new mongo.Server(
             'localhost',
@@ -10,6 +11,7 @@ var connMongoDB = function () {
         ),
         {}
     );
+
     return db;
 }
 
